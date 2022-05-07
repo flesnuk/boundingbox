@@ -19,5 +19,8 @@ func main() {
 
 	gg := gray.SubImage(boundingbox.Find(img, config))
 
-	SaveImagePNG(gg, "bbox.png")
+	err = SaveImagePNG(gg, "bbox.png")
+	if err != nil {
+		panic(err)
+	}
 }

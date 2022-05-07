@@ -90,18 +90,7 @@ func findParalel(img image.Image, config Config) image.Rectangle {
 	return result
 }
 
-type number interface {
-	int | float64
-}
-
-func max[T number](a, b T) T {
-	if a > b {
-		return a
-	}
-	return b
-}
-
-func min[T number](a, b T) T {
+func min(a, b int) int {
 	if a < b {
 		return a
 	}

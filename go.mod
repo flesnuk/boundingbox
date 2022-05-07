@@ -1,3 +1,3 @@
 module github.com/flesnuk/boundingbox
 
-go 1.18
+go 1.16

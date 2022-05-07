@@ -43,6 +43,5 @@ func SaveImagePNG(img image.Image, path string) error {
 		return err
 	}
 	defer f.Close()
-	png.Encode(f, img)
-	return nil
+	return png.Encode(f, img)
 }

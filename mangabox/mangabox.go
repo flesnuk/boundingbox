@@ -9,9 +9,7 @@ import (
 
 // ClampRectangle returns the rectangle moved by p while not exceeding the limits
 // https://stackoverflow.com/a/64250050
-func clampRectangle(rec image.Rectangle, p image.Point, limits image.Rectangle) image.Rectangle {
-	return image.Rectangle{}
-}
+// TODO
 
 // AdjustSimpleBbox
 func AdjustSimpleBbox(img image.Image, minMarginPct float64, maxMarginPct float64) image.Rectangle {
@@ -36,18 +34,14 @@ func AdjustSimpleBbox(img image.Image, minMarginPct float64, maxMarginPct float6
 
 }
 
-type Number interface {
-	int | float64
-}
-
-func Max[T Number](a, b T) T {
+func Max(a, b int) int {
 	if a > b {
 		return a
 	}
 	return b
 }
 
-func Min[T Number](a, b T) T {
+func Min(a, b int) int {
 	if a < b {
 		return a
 	}
